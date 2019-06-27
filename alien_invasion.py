@@ -68,6 +68,7 @@ class AlienInvasion:
             # 更新屏幕
             gf.update_screen(ai_settings, screen, stats, sb, ship, aliens, bullets, play_button)
 
+
 # 测试
 if __name__ == "__main__":
     ain = AlienInvasion()
