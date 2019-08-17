@@ -11,6 +11,10 @@
 import pygame
 
 
+def stop_music():
+    pygame.mixer.music.stop()
+
+
 class MusicPlayer:
     """游戏音乐播放器"""
     def __init__(self, music_name):
@@ -27,9 +31,6 @@ class MusicPlayer:
         # pygame.mixer.music.load(self.music_name)
         pygame.mixer.music.play()
 
-    def stop_music(self):
-        pygame.mixer.music.stop()
-
 
 music1 = MusicPlayer("music\m_unknow.mp3")
 music2 = MusicPlayer("music\mm.mp3")
@@ -38,7 +39,7 @@ pygame.time.delay(10000)
 music1.play_music()
 pygame.time.delay(10000)
 print("延时10S")
-music2.stop_music()
+stop_music()
 pygame.time.delay(10000)
 print("延时20S")
 
